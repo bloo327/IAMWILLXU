@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -21,28 +25,34 @@ header {
 }
 
 .pimg1 {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/background.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/background.jpg);
     min-height: 100vh; 
     background-position: center;
     background-size: cover;
 }
 
+@media screen and (max-width: 760px) {
+    body {
+
+    }
+}
+
 .pimg2 {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/background1.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/background1.jpg);
     min-height: 30vh; 
     background-position: center;
     background-size: cover;
 }
 
 .pimg3 {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/background4.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/background4.jpg);
     min-height: 30vh; 
     background-position: center;
     background-size: cover;
 }
 
 .pimg4 {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/background5.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/background5.jpg);
     min-height: 30vh; 
     background-position: center;
     background-size: cover;
@@ -96,14 +106,15 @@ nav {
     flex: 2;
 }
 
-.nav-links {
-    color: #F3F8F7;
+.nav-links {   
     justify-content: space-around;
     list-style: none;
 }
 
 .nav-link {
+    color: #F3F8F7;
     font-size: 1.1em;
+    font-weight: 550;
     text-decoration: none;
     -webkit-transition: color .2s linear;
     -moz-transition: color .2s linear;
@@ -114,14 +125,34 @@ nav {
 
 
 .slogan {
+    width: 50%;
+    margin: 0 auto;
     margin-top: 12%;
-    position: relative;
     text-align: center;   
 }
 
 .slogan h1 {
     font-weight: 200px;
-    font-size: 6em;
+    font-size: 6vw;
+}
+
+@media screen and (max-width: 580px) {
+    .pimg1 {
+        border: 5px solid red;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .slogan {
+        position: relative;
+        bottom: 400px;
+        border: 1px solid blue;
+    }
+
+    .nav-links, .logo-container {
+        display: none;
+    }
 }
 
 /* scroll down button */
@@ -152,6 +183,10 @@ nav {
     animation-delay: -0.4s;
 }
 
+.scrolldown:hover {
+
+}
+
 
 @keyframes animate {
     0% {
@@ -171,11 +206,16 @@ nav {
     }
 }
 /***/
+.section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-section img {
-    width: 100px;
-    height: 100px;
-    margin-left: 47%;
+.section1 img {
+    width: 5%;
+    text-align: center;
 }
 
 
