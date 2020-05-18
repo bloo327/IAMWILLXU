@@ -31,12 +31,6 @@ header {
     background-size: cover;
 }
 
-@media screen and (max-width: 760px) {
-    body {
-
-    }
-}
-
 .pimg2 {
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/background1.jpg);
     min-height: 30vh; 
@@ -138,16 +132,13 @@ nav {
 
 @media screen and (max-width: 580px) {
     .pimg1 {
-        border: 5px solid red;
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;   
     }
 
     .slogan {
         position: relative;
         bottom: 400px;
-        border: 1px solid blue;
     }
 
     .nav-links, .logo-container {
@@ -214,7 +205,7 @@ nav {
 }
 
 .section1 img {
-    width: 5%;
+    width: 15%;
     text-align: center;
 }
 
@@ -223,7 +214,7 @@ nav {
 /* some animations */
 .ptext {
     position: relative;
-    padding-top: 5%;
+    top: 60px;
     text-align: center;
     -webkit-transition: color .3s linear;
     -moz-transition: color .3s linear;
@@ -251,25 +242,3 @@ nav {
 }
 
 
-/* media queries */
-
-
-
-
-
-
-/* backgroundfade change (experiment) 
-@keyframes slide {
-    0% {
-        background-image: url(images/background.jpg);
-    }
-    25% {
-        background-image: url(images/background1.jpg);
-    }
-    50% {
-        background-image: url(images/background2.jpg);
-    }
-    75% {
-        background-image: url(images/background3.jpg);
-    }
-}                                                         */
