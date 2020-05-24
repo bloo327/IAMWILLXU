@@ -144,6 +144,9 @@ nav {
     .nav-links, .logo-container {
         display: none;
     }
+    .pimg2, .pimg3, .pimg4 {
+        border-radius: 10px;
+    }
 }
 
 /* scroll down button */
@@ -174,9 +177,6 @@ nav {
     animation-delay: -0.4s;
 }
 
-.scrolldown:hover {
-
-}
 
 
 @keyframes animate {
@@ -202,19 +202,19 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.section1 img {
-    width: 15%;
     text-align: center;
+    width: 80%;
 }
 
+.section4 {
+    padding-bottom: 5rem;
+}
 
 
 /* some animations */
 .ptext {
     position: relative;
-    top: 60px;
+    top: 90px;
     text-align: center;
     -webkit-transition: color .3s linear;
     -moz-transition: color .3s linear;
@@ -233,6 +233,7 @@ nav {
 .pimg2, .pimg3, .pimg4 {
     height: 100%;
     transition: transform .5s ease;
+    border-radius: 5px;
 }
 
 .pimgcontainer:hover .pimg2,
