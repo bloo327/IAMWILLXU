@@ -119,6 +119,92 @@ nav ul {
     -webkit-text-fill-color: transparent;
 }
 
+.section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;  
+}
+
+.section4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6rem;
+}
+
+.row {
+    padding: 2rem 0;
+}
+
+.form-control {
+    padding: 1.5rem;
+}
+
+.col-md-12 {
+    text-align: center;
+}
+
+.ph-area {
+    color: rgb(109, 109, 109);
+    position: absolute;
+    top: 0;
+    padding: 1rem 0 0 1.5rem;
+    transition: all 200ms linear;
+}
+
+.form-control:focus + .ph-area,
+.form-control:valid + .ph-area {
+    font-size: 90%;
+    transform: translate3d(0, -100%, 0);
+    color: white;
+}
+
+/* some animations */
+.ptext {
+    position: relative;
+    top: 90px;
+    text-align: center;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0.747));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pimgcontainer {
+    height: 100%;
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.pimg2, .pimg3, .pimg4 {
+    border-radius: 5px;
+    filter: saturate(45%);
+    -webkit-transition : -webkit-filter .5s linear;
+    transition: filter .5s linear, transform .4s linear;
+}
+
+.pimgcontainer:hover .pimg2,
+.pimgcontainer:hover .pimg3,
+.pimgcontainer:hover .pimg4 {
+    transform: scale(1.05);
+    filter: saturate(100%);
+}
+
+.fa-instagram {
+    font-size: 4rem;
+    transition: all .3s linear;
+}
+
+.fa-instagram:hover {
+    color: lightgrey;
+    transform: scale(0.97);
+}
+
 /* scroll down button */
 .scrolldown {
     position: asbolute;
@@ -167,69 +253,6 @@ nav ul {
     }
 }
 /***/
-.section1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    font-weight: 1000;
-    background: linear-gradient(to right, white, rgb(197, 197, 197));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.section4 {
-    padding-bottom: 6rem;
-    font-weight: 1000;
-    background: linear-gradient(to right, white, rgb(197, 197, 197));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
-/* some animations */
-.ptext {
-    position: relative;
-    top: 90px;
-    text-align: center;
-    background: linear-gradient(to right, white, rgba(255, 255, 255, 0.747));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.pimgcontainer {
-    height: 100%;
-    width: 85%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.pimg2, .pimg3, .pimg4 {
-    border-radius: 5px;
-    filter: saturate(50%);
-    -webkit-transition : -webkit-filter .5s linear;
-    transition: filter .5s linear, transform .4s linear;
-}
-
-.pimgcontainer:hover .pimg2,
-.pimgcontainer:hover .pimg3,
-.pimgcontainer:hover .pimg4 {
-    transform: scale(1.05);
-    filter: saturate(100%);
-}
-
-section a img {
-    transition: transform .5s ease;
-}
-
-section a img:hover {
-    transform: scale(0.95);
-}
 
 @media screen and (max-width: 768px) {
     .pimg1 {

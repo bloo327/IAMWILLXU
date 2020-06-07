@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William Xu</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
 </head>
 
@@ -48,7 +49,7 @@
             <br><br>
             Let’s create ours.
             </p>
-            <a href="https://www.instagram.com/iamwillxu/" target="_blank"><img src="images/iglogo.png" alt="instagram" /> </a>
+            <a href="https://www.instagram.com/imwillxu/" target="_blank"><i class="fa fa-instagram"></i></a>
         </section>
 
         <a name="cars"></a>
@@ -88,15 +89,29 @@
         
         <a name="contact"></a>
         <section class="section4">
-            <h2> Contact </h2><br>
-            <p>Lorem ipsum dolor st amet consectetur, adipisicing elit. Nulla dolorem minima, aut voluptates quibusdam, 
-                consectetur iure corrupti veritatis recusandae in ratione praesentium fugiat cumque esse 
-                amet placeat dicta nisi assumenda delectus aliquam obcaecati odit labore. Molestias itaque nulla ab 
-                in tenetur at provident minus corporis, libero illo, sit quas error doloribus? Facere temporibus aliquam natus, 
-                adipisci similique accusantium laudantium harum quisquam libero culpa hic nesciunt soluta 
-                consequuntur sapiente vitae, delectus dignissimos optio nam officiis non,
-            </p>   
-            <!-- contact form here --> 
+            <h2> Contact </h2><br>   
+            <!-- contact form -->
+            <div class="col-md-8 col-md-offset 2">
+                <form id="contact" method="post" class="form" role="form">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input class="form-control" id="name" name="name" type="text" required />
+                            <label for="name" class="ph-area">Name</label>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input class="form-control" id="email" name="email" type="text" required />
+                            <label for="email" class="ph-area">Email Address</label>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="message" name="message" placeholder="Message" rows="10"></textarea>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <button class="btn btn-dark" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div> 
         </section>
     </main>
 </body>
