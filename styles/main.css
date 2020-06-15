@@ -11,21 +11,16 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     height: 100%;
-    background-color: black;
     color: white;
 }
 
-header {
-    height: 10vh;
-    width: 90%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+main {
+    background: linear-gradient(180deg, #020304, rgb(21, 21, 21));
 }
 
 .pimg1 {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../images/background.jpg);
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.404), rgba(0, 0, 0, 0.404)), url(../images/background.jpg);
     min-height: 100vh; 
     background-position: center;
     background-size: cover;
@@ -65,21 +60,41 @@ section {
 
 section h2 {
     text-align: center;
+    font-size: 2.5rem;
+}
+
+header {
+    position: relative;
+    height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadein 2s;
 }
 
 .logo-container {
     flex: 1;
 }
 
-.logo-container h1 {
-    display: block;
+.logo-container a {
     font-size: 2.1rem;
     margin: auto;
     padding: 0 5px;
+    transition: color .2s linear;
+}
+
+.logo-container a:hover {
+    color: grey;
+}
+
+.logo-container a {
+    text-decoration: none;
 }
 
 nav {
-    flex: 1.2;
+    flex: 1.5;
 }
 
 nav ul {  
@@ -107,25 +122,51 @@ nav ul {
     width: 50%;
     margin: 0 auto;
     margin-top: 12%;
-    text-align: center;   
+    text-align: center;
+    animation: fadein 2.5s;   
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .slogan h1 {
-    font-weight: 200px;
+    font-weight: 100;
     font-size: 6vw;
-    background: linear-gradient(to right, white, rgba(255, 255, 255, 0.747));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(1px 3px 1px black);
 }
 
 .section1 {
+    padding: 5rem 0;
+}
+
+.aboutme {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    width: 80%;  
+    width: 80%;
+    margin: 0 auto;
+}
+
+.aboutme img {
+    margin-left: 2rem;
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+    filter: drop-shadow(0px 3px 5px black);
+}
+
+.preappear {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s all ease-in-out;  
+}
+
+.appear {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .section4 {
@@ -133,7 +174,15 @@ nav ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 6rem;
+    padding: 4rem 0;
+}
+
+.section4 h2 {
+    filter: drop-shadow(5px 8px 1px black);
+}
+
+#contact {
+    filter: drop-shadow(0px 3px 5px black);
 }
 
 .row {
@@ -159,39 +208,42 @@ nav ul {
 .form-control:focus + .ph-area,
 .form-control:valid + .ph-area {
     font-size: 90%;
-    transform: translate3d(0, -100%, 0);
+    transform: translateY(-100%);
     color: white;
 }
 
-/* some animations */
 .ptext {
     position: relative;
     top: 90px;
     text-align: center;
-    background: linear-gradient(to right, white, rgba(255, 255, 255, 0.747));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(1px 1px 1px black);
+    opacity: 0.9;
 }
 
 .pimgcontainer {
     height: 100%;
-    width: 85%;
+    width: 80%;
     margin: auto;
     overflow: hidden;
+    filter: drop-shadow(0px 3px 5px black);
+}
+
+.pimgcontainer a {
+    text-decoration: none;
 }
 
 .pimg2, .pimg3, .pimg4 {
     border-radius: 5px;
+    transform: scale(1);
     filter: saturate(45%);
-    -webkit-transition : -webkit-filter .5s linear;
-    transition: filter .5s linear, transform .4s linear;
+    -webkit-transition : -webkit-filter .3s linear;
+    transition: all .3s linear, transform .3s linear;
 }
 
 .pimgcontainer:hover .pimg2,
 .pimgcontainer:hover .pimg3,
 .pimgcontainer:hover .pimg4 {
-    transform: scale(1.05);
+    transform: scale(0.99);
     filter: saturate(100%);
 }
 
@@ -203,6 +255,41 @@ nav ul {
 .fa-instagram:hover {
     color: lightgrey;
     transform: scale(0.97);
+}
+
+footer {
+    position: relative;
+    z-index: 5;
+    text-align: right;
+    padding: .75rem;
+    font-size: 0.75rem;
+}
+
+footer a {
+    color: white;
+    transition: all .2s linear;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: grey;
+}
+
+.pimg1 {
+    z-index: 0;
+}
+header {
+    z-index: 2;
+}
+/* light effect */
+.pimg1 .light {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--cx) var(--cy), transparent, rgba(0, 0, 0, 0.514) 80%);
 }
 
 /* scroll down button */
@@ -270,6 +357,18 @@ nav ul {
     }
     .pimg2, .pimg3, .pimg4 {
         filter: saturate(100%);   
+    }
+
+    .col-md-6 {
+        padding: 0.5rem 0;
+    
+    }
+    .aboutme img {
+        display: none;
+    }
+
+    .fa-instagram {
+        color: white;
     }
 }
 
