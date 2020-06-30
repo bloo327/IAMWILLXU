@@ -13,13 +13,103 @@ body {
 }
 
 header {
-    height: 10vh;
     display: flex;
-    width: 91.5%;
-    margin: auto;
     align-items: center;
     justify-content: space-between;
-    animation: fadeinOnly 3s;
+    height: 10vh;
+    width: 80%;
+    margin: .5% auto;
+    animation: fadein 2s;
+    #logo-container {
+        flex: 2;
+        h2 {
+            font-size: 2.1rem;
+            margin: auto;
+            padding: 0 5px;
+            padding-bottom: 10px;
+            a {
+                text-decoration: none;
+                color: white;
+                transition: color .2s;
+                &:hover {
+                    color: lightgrey;
+                    &::after {
+                        width: 17.5%;
+                    }
+                }
+                &::after {
+                    content:'';
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background: lightgrey;
+                    transition: width .3s ease;
+                }
+            }
+        }
+    }
+    nav {
+        flex: 1;
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            li {
+                list-style-type: none;
+                .nav-link {
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    font-weight: 550;
+                    transition: color .2s linear;
+                    &:visited {
+                        color: white;
+                    }
+                    &:hover {
+                        color: lightgrey;
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                    &::after {
+                        content:'';
+                        display: block;
+                        width: 0;
+                        height: 2px;
+                        background: lightgrey;
+                        transition: width .3s ease;
+                    }
+                }
+                #contactbtn {
+                    border: 1px solid white;
+                    padding: .5rem 1rem;
+                    border-radius: 5px;
+                    transition: all .2s linear;
+                    &:hover {
+                        color: grey;
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+.myworkdropdown {
+    .myworkbtn {
+        cursor: pointer;
+    }
+    &:hover .dropdowncontent {
+        display: inline-block;
+    }
+    .dropdowncontent {
+        z-index: 1;
+        position: absolute;
+        display: none;
+        li {
+            animation: fadeinDropdown .5s linear;
+            a {
+                color: inherit;
+            }
+        }
+    }
 }
 
 footer {
@@ -36,47 +126,6 @@ footer {
     }
 }
 /**/
-.logo-container {
-    flex: 1;
-    a {
-        text-decoration: none;
-        color: white;
-        width: 20%;
-        position: relative;
-        z-index: 5;
-    }
-    h2 {
-        font-size: 2.1rem;
-        margin: auto;
-        padding: 0 5px;
-        padding-bottom: 10px;
-    }
-}
-
-nav {
-    flex: 1.363;
-    .nav-links {
-        display: flex;
-        justify-content: space-around;
-        li {
-            text-decoration: none;
-            list-style-type: none;
-            .nav-link {
-                color: #F3F8F7;
-                font-size: 1.1em;
-                font-weight: 550;
-                transition: color .2s linear;
-                &:visited {
-                    color: white;
-                }
-                &:hover {
-                    color: grey;
-                }
-            }
-        }
-    }
-}
-
 
 .pictype {
     text-align: center;
@@ -149,129 +198,10 @@ nav {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-.logo-container > h2 {
-    transition: all 0.5s;
-    &:before{
-        transition: all 0.4s;  
-        position:absolute;
-        content:"";
-        width:10.5%;
-        height:2.5%;
-        left:50%;
-        margin-left:-45.5%;
-        top: 4%;
-        border-color:rgba(200,200,200,0);
-        border-style:solid;
-        border-width:0 1px;
-    }
-    
-    &:after{
-        transition: all 0.4s;  
-        position:absolute;
-        content:"";
-        width:2.5%;
-        height:7%;
-        left:50%;
-        margin-top: .75%;
-        margin-left:-41.5%;
-        top:0;
-        border-color:rgba(200,200,200, 0);
-        border-style:solid;
-        border-width:1px 0;
-    }
-
-    &:hover {
-        &:after {
-            width: 10.5%;
-            margin-left:-45.5%;
-            border-color:rgb(255, 255, 255);
-            border-width: 2px 0;
-            border-radius: 5px;
-        }
-        &:before {
-            height: 7%;
-            top: 1.5%;
-            border-color:rgb(255, 255, 255);
-            border-width:0 2px;
-            border-radius: 5px;
-        }
-    }
+@keyframes fadeinDropdown {
+    from { opacity: 0; transform: translateY(-20%) }
+    to   { opacity: 1; transform: translateY(0%) }
 }
-
-/* bg stars */
-@function multiple-box-shadow($n) {
-    $value: '#{random(2000)}px #{random(2000)}px #FFF';
-    @for $i from 2 through $n {
-        $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
-    }
-    @return unquote($value);
-}
-$shadows-small:  multiple-box-shadow(700);
-$shadows-medium: multiple-box-shadow(200);
-$shadows-big:    multiple-box-shadow(100);
-
-#stars {
-    width: 1px;
-    height: 1px;
-    background: transparent;
-    box-shadow: $shadows-small;
-    animation: animStar 50s linear infinite;
-    &:after {
-        content: "";
-        position: absolute;
-        top: 2000px;
-        width: 1px;
-        height: 1px;
-        background: transparent;
-        box-shadow: $shadows-small;
-    }
-}
-
-#stars2 {
-    width: 2px;
-    height: 2px;
-    background: transparent;
-    box-shadow: $shadows-medium;
-    animation: animStar 100s linear infinite;
-    &:after {
-        content: " ";
-        position: absolute;
-        top: 2000px;
-        width: 2px;
-        height: 2px;
-        background: transparent;
-        box-shadow: $shadows-medium;
-    }
-}
-
-#stars3 {
-    width: 3px;
-    height: 3px;
-    background: transparent;
-    box-shadow: $shadows-big;
-    animation: animStar 150s linear infinite;
-    &:after {
-        content: " ";
-        position: absolute;
-        top: 2000px;
-        width: 3px;
-        height: 3px;
-        background: transparent;
-        box-shadow: $shadows-big;
-    }
-}
-
-@keyframes animStar {
-    from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(-2000px);
-    }
-}
-
-/**/
 .preappear {
     opacity: 0.1;
     transform: translateY(20px);
@@ -285,9 +215,6 @@ $shadows-big:    multiple-box-shadow(100);
 /**/
 @media screen and (max-width: 768px) {
     nav {
-        display: none;
-    }
-    #stars, #stars2, #stars3 {
         display: none;
     }
 }

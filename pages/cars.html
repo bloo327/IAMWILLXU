@@ -11,22 +11,25 @@
     <title>Cars</title>
 </head>
 <body>
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='stars3'></div>
     <div class="pagewrapper container-fluid">
     <div id="header">
         <header>
-            <div class="logo-container">
-                <h2 class="logo"><a href="/index.html">IAM<span style="color: grey">WILL</span>XU</a></h2>
+            <div id="logo-container">
+                <h2 class="logo"><a href="/index.html">IAM<span style="color: lightgrey">WILL</span>XU</a></h2>
             </div>
-            <nav>
+            <nav id="nav">
                 <ul class="nav-links">
+                    <div class="myworkdropdown">
+                    <li><a class="myworkbtn nav-link">My Work <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdowncontent">
+                            <li><a class="nav-link" href="/pages/portraits.html">Portraits</a></li>
+                            <li><a class="nav-link" href="/pages/cars.html">Cars</a></li>
+                            <li><a class="nav-link" href="/pages/landscapes.html">Landscapes</a></li>
+                        </ul>
+                    </li>
+                    </div>
                     <li><a class="nav-link" href="/index.html#aboutme">About</a></li>
-                    <li><a class="nav-link" href="/pages/cars.html">Cars</a></li>
-                    <li><a class="nav-link" href="/pages/landscapes.html">Landscapes</a></li>
-                    <li><a class="nav-link" href="/pages/portraits.html">Portraits</a></li>
-                    <li><a class="nav-link" href="/pages/index.html#contact">Contact</a></li>
+                    <li><a id="contactbtn" class="nav-link" href="/index.html#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
