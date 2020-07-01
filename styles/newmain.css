@@ -224,8 +224,12 @@ header nav .nav-links li #contactbtn:hover {
   text-align: center;
 }
 
-.section .fa-instagram {
-  margin-left: 48.5%;
+.section .igbtncontainer {
+  width: 100%;
+  text-align: center;
+}
+
+.section .igbtncontainer .fa-instagram {
   color: white;
   font-size: 3rem;
   -webkit-transition: all .1s linear;
@@ -234,7 +238,7 @@ header nav .nav-links li #contactbtn:hover {
           animation: fadein 2s;
 }
 
-.section .fa-instagram:hover {
+.section .igbtncontainer .fa-instagram:hover {
   color: lightgrey;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
@@ -274,7 +278,7 @@ header nav .nav-links li #contactbtn:hover {
 
 .col-md-8 .row {
   padding: 2rem 0;
-  width: 60vw;
+  width: 50vw;
 }
 
 .col-md-8 .row .form-control {
@@ -459,6 +463,12 @@ footer a:hover {
   }
   .aboutme img {
     width: 50vw;
+  }
+  .row {
+    display: inline;
+  }
+  .row .col-md-6 {
+    padding: .5rem 0;
   }
 }
 

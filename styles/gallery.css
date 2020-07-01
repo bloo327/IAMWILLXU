@@ -172,6 +172,7 @@ header nav .nav-links li #contactbtn:hover {
 .gallery-container {
   margin: 0 auto;
   width: 75%;
+  padding-bottom: 4rem;
 }
 
 .row {
