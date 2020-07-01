@@ -16,27 +16,37 @@
     <div id="header">
         <header>
             <div id="logo-container">
-                <h2 class="logo"><a href="/index.html">IAM<span style="color: lightgrey">WILL</span>XU</a></h2>
+                <h2 class="logo"><a href="../index.html">IAM<span style="color: lightgrey">WILL</span>XU</a></h2>
             </div>
             <nav id="nav">
+                <div class="hamburger">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <ul id="burgerdropdowncontent">
+                        <li><a class="burger-nav-link" href="../pages/portraits.html">Portraits</a></li>
+                        <li><a class="burger-nav-link" href="../pages/cars.html">Cars</a></li>
+                        <li><a class="burger-nav-link" href="../pages/landscapes.html">Landscapes</a></li>
+                    </ul>
+                </div>
                 <ul class="nav-links">
                     <div class="myworkdropdown">
-                    <li><a class="myworkbtn nav-link">My Work <i class="fas fa-angle-down"></i></a>
+                    <li><a class="myworkbtn nav-link">Photography <i class="fas fa-angle-down"></i></a>
                         <ul class="dropdowncontent">
-                            <li><a class="nav-link" href="/pages/portraits.html">Portraits</a></li>
-                            <li><a class="nav-link" href="/pages/cars.html">Cars</a></li>
-                            <li><a class="nav-link" href="/pages/landscapes.html">Landscapes</a></li>
+                            <li><a class="nav-link" href="../pages/portraits.html">Portraits</a></li>
+                            <li><a class="nav-link" href="../pages/cars.html">Cars</a></li>
+                            <li><a class="nav-link" href="../pages/landscapes.html">Landscapes</a></li>
                         </ul>
                     </li>
                     </div>
-                    <li><a class="nav-link" href="/index.html#aboutme">About</a></li>
-                    <li><a id="contactbtn" class="nav-link" href="/index.html#contact">Contact</a></li>
+                    <li><a class="nav-link" href="../index.html#aboutme">About</a></li>
+                    <li><a id="contactbtn" class="nav-link" href="../index.html#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
     </div>
 
-    <h1 class="pictype rellax" data-rellax-speed="-3"> PORTRAITS </h1>
+    <h1 class="pictype"> PORTRAITS </h1>
     <div class="gallery-container">
         <div class="gallery">
             <div class="row">
@@ -139,10 +149,7 @@
             </div>
         </div>
     </div>
-    <footer>
-        2020 Brendan Liu <a href="https://www.github.com/bloo327" target="_blank">www.github.com/bloo327</a>
-    </footer>
-<script src="/js/gallery.js"></script>
+<script src="../js/gallery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script type="text/javascript">
@@ -156,10 +163,6 @@
         "close"
     ]
 });
-</script>
-<script src="../js/node_modules/rellax/rellax.min.js"></script>
-<script>
-    const rellax = new Rellax('.rellax');
 </script>
 </body>
 </html>

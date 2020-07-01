@@ -60,6 +60,7 @@ header {
                     font-size: 1.1rem;
                     font-weight: 550;
                     transition: color .2s linear;
+                    color: inherit;
                     &:visited {
                         color: white;
                     }
@@ -75,7 +76,7 @@ header {
                         width: 0;
                         height: 2px;
                         background: lightgrey;
-                        transition: width .3s ease;
+                        transition: width .2s ease;
                     }
                 }
                 #contactbtn {
@@ -112,24 +113,11 @@ header {
     }
 }
 
-footer {
-    text-align: right;
-    padding-right: 1rem;
-    font-size: 0.75rem;
-    a {
-        color: white;
-        transition: all .2s linear;
-        &:hover {
-            text-decoration: none;
-            color: grey;
-        } 
-    }
-}
 /**/
-
 .pictype {
     text-align: center;
-    padding: 5rem 0;
+    padding-top: 10rem;
+    padding-bottom: 6rem;
     animation: fadein 1.5s;
     font-size: 3rem;
     animation: fadein 2.5s;
@@ -190,6 +178,39 @@ footer {
     animation: fadein 3.5s;
 }
 
+.hamburger {
+    position: relative;
+    display: none;
+    margin-left: 90%;
+    cursor: pointer;
+    .bar1, .bar2, .bar3 {
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin: 6px 0;
+        transition: all 0.4s;
+    }
+    #burgerdropdowncontent {
+        display: none;
+        z-index: 1;
+        list-style-type: none;
+        position: absolute;
+        text-align: right;
+        transform: translateX(-70%);
+        animation: burgerFadein 500ms;
+        li {
+            padding: 20% 0;
+            .burger-nav-link {
+                color: white;
+            }
+        }
+    }
+}
+.change .bar1 { transform: rotate(-45deg) translate(-6.5px, 6px); }
+.change .bar2 { opacity: 0; }
+.change .bar3 { transform: rotate(45deg) translate(-8px, -8px); }
+
+
 @keyframes fadein {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0px); }
@@ -202,6 +223,10 @@ footer {
     from { opacity: 0; transform: translateY(-20%) }
     to   { opacity: 1; transform: translateY(0%) }
 }
+@keyframes burgerFadein {
+    from { opacity: 0; transform: translate(-70%, -20%) }
+    to   { opacity: 1; transform: translate(-70%, 0%) }
+}
 .preappear {
     opacity: 0.1;
     transform: translateY(20px);
@@ -213,8 +238,17 @@ footer {
     transform: translateY(0px);
 }
 /**/
+@media screen and (max-width: 1320px) {
+    nav { padding-top: 2%; }
+    .myworkbtn { text-align: center; }
+}
+
 @media screen and (max-width: 768px) {
-    nav {
-        display: none;
+    .nav-link { display: none; }
+    .hamburger { 
+        display: inline-block;
+    }
+    .pictype {
+        font-size: 2rem;
     }
 }

@@ -20,3 +20,14 @@ window.addEventListener('scroll', ()=>{
   animateOnScroll('.igbtn', .6, 'appear', true)
 })
 
+
+
+function burgerWtf(x){
+  var content = document.getElementById("burgerdropdowncontent");
+  var dropdown = document.querySelector('.hamburger');
+  dropdown.addEventListener('click', ()=>{
+    dropdown.classList.toggle('change');
+    content.style.display = content.style.display === 'inline-block' ? "none" : 'inline-block';
+  })
+}
+burgerWtf();

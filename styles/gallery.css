@@ -94,6 +94,7 @@ header nav .nav-links li .nav-link {
   font-weight: 550;
   -webkit-transition: color .2s linear;
   transition: color .2s linear;
+  color: inherit;
 }
 
 header nav .nav-links li .nav-link:visited {
@@ -114,8 +115,8 @@ header nav .nav-links li .nav-link::after {
   width: 0;
   height: 2px;
   background: lightgrey;
-  -webkit-transition: width .3s ease;
-  transition: width .3s ease;
+  -webkit-transition: width .2s ease;
+  transition: width .2s ease;
 }
 
 header nav .nav-links li #contactbtn {
@@ -154,27 +155,11 @@ header nav .nav-links li #contactbtn:hover {
   color: inherit;
 }
 
-footer {
-  text-align: right;
-  padding-right: 1rem;
-  font-size: 0.75rem;
-}
-
-footer a {
-  color: white;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
-}
-
-footer a:hover {
-  text-decoration: none;
-  color: grey;
-}
-
 /**/
 .pictype {
   text-align: center;
-  padding: 5rem 0;
+  padding-top: 10rem;
+  padding-bottom: 6rem;
   -webkit-animation: fadein 1.5s;
           animation: fadein 1.5s;
   font-size: 3rem;
@@ -260,6 +245,56 @@ footer a:hover {
           animation: fadein 3.5s;
 }
 
+.hamburger {
+  position: relative;
+  display: none;
+  margin-left: 90%;
+  cursor: pointer;
+}
+
+.hamburger .bar1, .hamburger .bar2, .hamburger .bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.hamburger #burgerdropdowncontent {
+  display: none;
+  z-index: 1;
+  list-style-type: none;
+  position: absolute;
+  text-align: right;
+  -webkit-transform: translateX(-70%);
+          transform: translateX(-70%);
+  -webkit-animation: burgerFadein 500ms;
+          animation: burgerFadein 500ms;
+}
+
+.hamburger #burgerdropdowncontent li {
+  padding: 20% 0;
+}
+
+.hamburger #burgerdropdowncontent li .burger-nav-link {
+  color: white;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6.5px, 6px);
+          transform: rotate(-45deg) translate(-6.5px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+          transform: rotate(45deg) translate(-8px, -8px);
+}
+
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -330,6 +365,32 @@ footer a:hover {
   }
 }
 
+@-webkit-keyframes burgerFadein {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(-70%, -20%);
+            transform: translate(-70%, -20%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(-70%, 0%);
+            transform: translate(-70%, 0%);
+  }
+}
+
+@keyframes burgerFadein {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(-70%, -20%);
+            transform: translate(-70%, -20%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(-70%, 0%);
+            transform: translate(-70%, 0%);
+  }
+}
+
 .preappear {
   opacity: 0.1;
   -webkit-transform: translateY(20px);
@@ -345,9 +406,24 @@ footer a:hover {
 }
 
 /**/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1320px) {
   nav {
+    padding-top: 2%;
+  }
+  .myworkbtn {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-link {
     display: none;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+  .pictype {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=gallery.css.map */
