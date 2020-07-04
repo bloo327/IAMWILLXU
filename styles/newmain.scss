@@ -31,9 +31,10 @@ header {
             a {
                 text-decoration: none;
                 color: white;
-                transition: color .2s;
+                transition: all .2s;
                 &:hover {
-                    color: lightgrey;
+                    font-weight: bold;
+                    color: rgb(255, 136, 0);
                     &::after {
                         width: 17.5%;
                     }
@@ -43,7 +44,7 @@ header {
                     display: block;
                     width: 0;
                     height: 2px;
-                    background: lightgrey;
+                    background: rgb(255, 136, 0);
                     transition: width .3s ease;
                 }
             }
@@ -190,8 +191,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    P {
+        padding-right: 2rem;
+    }
     img {
-        margin-left: 2rem;
         max-width: 250px;
         width: 100%;
         height: auto;
@@ -234,10 +237,11 @@ header {
 footer {
     text-align: right;
     padding-right: 1rem;
-    font-size: 0.75rem;
+    font-size: .75rem;
     a {
         color: white;
         transition: all .2s linear;
+        font-size: 1rem;
         &:hover {
             text-decoration: none;
             color: grey;
@@ -302,6 +306,12 @@ footer {
     to   { opacity: 1; transform: translate(-70%, 0%) }
 }
 
+@keyframes scrolldownFlash {
+    0% { opacity: .25; }
+    50% { opacity: .8; }
+    100% { opacity: .25; }
+}
+
 @media screen and (max-width: 768px) {
     .nav-link { display: none; }
     .hamburger { 
@@ -312,10 +322,17 @@ footer {
         background-size: cover;
         background-position: center;
     }
+    #scrolldownbutton {
+        animation: scrolldownFlash 1s 3;
+    }
     .aboutme {
         display: flex;
         flex-direction: column;
+        p {
+            padding: 0;
+        }
         img {
+            margin-top: 2rem;
             width: 50vw;
         }
     }

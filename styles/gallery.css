@@ -52,7 +52,8 @@ header #logo-container h2 a {
 }
 
 header #logo-container h2 a:hover {
-  color: lightgrey;
+  font-weight: bold;
+  color: #ff8800;
 }
 
 header #logo-container h2 a:hover::after {
@@ -64,7 +65,7 @@ header #logo-container h2 a::after {
   display: block;
   width: 0;
   height: 2px;
-  background: lightgrey;
+  background: #ff8800;
   -webkit-transition: width .3s ease;
   transition: width .3s ease;
 }
@@ -158,8 +159,7 @@ header nav .nav-links li #contactbtn:hover {
 /**/
 .pictype {
   text-align: center;
-  padding-top: 10rem;
-  padding-bottom: 6rem;
+  padding: 9rem 0;
   -webkit-animation: fadein 1.5s;
           animation: fadein 1.5s;
   font-size: 3rem;
@@ -171,8 +171,14 @@ header nav .nav-links li #contactbtn:hover {
 
 .gallery-container {
   margin: 0 auto;
-  width: 75%;
+  width: 90%;
   padding-bottom: 4rem;
+}
+
+.mobilerows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .row {
@@ -181,23 +187,37 @@ header nav .nav-links li #contactbtn:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.row .column {
+.row .mobilerows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row .mobilerows .column {
   -webkit-box-flex: 25%;
       -ms-flex: 25%;
           flex: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   overflow: hidden;
   text-align: center;
+  margin: 1rem;
 }
 
-.row .column img {
+.row .mobilerows .column img {
   max-width: 300px;
   width: 100%;
   height: 100%;
@@ -425,6 +445,18 @@ header nav .nav-links li #contactbtn:hover {
   }
   .pictype {
     font-size: 2rem;
+  }
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .row .mobilerows {
+    display: block;
   }
 }
 /*# sourceMappingURL=gallery.css.map */

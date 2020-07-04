@@ -32,7 +32,8 @@ header {
                 color: white;
                 transition: color .2s;
                 &:hover {
-                    color: lightgrey;
+                    font-weight: bold;
+                    color: rgb(255, 136, 0);
                     &::after {
                         width: 17.5%;
                     }
@@ -42,7 +43,7 @@ header {
                     display: block;
                     width: 0;
                     height: 2px;
-                    background: lightgrey;
+                    background: rgb(255, 136, 0);
                     transition: width .3s ease;
                 }
             }
@@ -116,8 +117,7 @@ header {
 /**/
 .pictype {
     text-align: center;
-    padding-top: 10rem;
-    padding-bottom: 6rem;
+    padding: 9rem 0;
     animation: fadein 1.5s;
     font-size: 3rem;
     animation: fadein 2.5s;
@@ -126,25 +126,34 @@ header {
 
 .gallery-container {
     margin: 0 auto;
-    width: 75%;
+    width: 90%;
     padding-bottom: 4rem;
 }
 
+.mobilerows {
+    display: flex;
+}
 .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    .column {
-        flex: 25%;
-        overflow: hidden;
-        text-align: center;
-        img {
-            max-width: 300px;
-            width: 100%;
-            height: 100%;
-            padding-bottom: 2.5rem;
-            border-radius: 5px;
+    justify-content: center;
+    .mobilerows {
+        display: flex;
+        .column {
+            flex: 25%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            text-align: center;
+            margin: 1rem;
+            img {
+                max-width: 300px;
+                width: 100%;
+                height: 100%;
+                padding-bottom: 2.5rem;
+                border-radius: 5px;
+            }
         }
     }
 }
@@ -251,5 +260,12 @@ header {
     }
     .pictype {
         font-size: 2rem;
+    }
+    .row {
+        .mobilerows {
+            display: block;
+        }
+        display: flex;
+        flex-direction: column;
     }
 }
