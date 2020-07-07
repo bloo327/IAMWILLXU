@@ -257,9 +257,9 @@ header nav .nav-links li #contactbtn:hover {
 }
 
 .aboutme img {
-  max-width: 250px;
+  max-width: 230px;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 7px;
   -webkit-filter: drop-shadow(1px 3px 3px black);
           filter: drop-shadow(1px 3px 3px black);
